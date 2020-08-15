@@ -527,8 +527,10 @@ EOF
 sudo cp /home/ec2-user/cloudwatch_config.json /opt/aws/amazon-cloudwatch-agent/bin/config.json
 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+
 #
 # If the gpu v=true it enables the GPU to be utilized
+
 cat << EOF > /home/ec2-user/fah_config.xml
 
 <config>
@@ -541,13 +543,15 @@ cat << EOF > /home/ec2-user/fah_config.xml
 
 <team v="Default"/>
 
-<user v="0"/> 
+<user v="doncornelius01"/> 
 
 <passkey v="PASSKEY_HERE"/>
 
 </config>
-#
+
 EOF
+
+#
 
 sudo /etc/init.d/FAHClient stop
 
