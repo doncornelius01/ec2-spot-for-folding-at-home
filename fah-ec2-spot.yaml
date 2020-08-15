@@ -543,7 +543,7 @@ cat << EOF > /home/ec2-user/fah_config.xml
 
 <team v="Default"/>
 
-<user v="doncornelius01"/> 
+<user v="0"/> 
 
 <passkey v="PASSKEY_HERE"/>
 
